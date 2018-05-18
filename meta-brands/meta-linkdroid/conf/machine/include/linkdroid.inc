@@ -18,7 +18,7 @@ DISTRO_FEATURES_remove = "x11 wayland"
 
 IMAGEDIR ?= "${MACHINE}"
 
-IMAGE_CMD_alien5sdimg_append = " \
+IMAGE_CMD_k1prosdimg_append = " \
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
     mv ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}-sd.img ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${IMAGE_NAME}-sd.img; \
     echo ${DISTRO_NAME}-${DISTRO_VERSION}.${BUILD_VERSION} > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/imageversion; \
