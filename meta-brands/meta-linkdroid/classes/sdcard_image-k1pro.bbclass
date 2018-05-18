@@ -1,6 +1,6 @@
 inherit image_types
 
-IMAGE_TYPEDEP_alien5sdimg = "${SDIMG_ROOTFS_TYPE}"
+IMAGE_TYPEDEP_k1prosdimg = "${SDIMG_ROOTFS_TYPE}"
 
 BOOTDD_VOLUME_ID ?= "BOOT"
 
@@ -25,7 +25,7 @@ FATPAYLOAD ?= ""
 
 IMAGEDATESTAMP = "${@time.strftime('%Y.%m.%d',time.gmtime())}"
 
-IMAGE_CMD_alien5sdimg () {
+IMAGE_CMD_k1prosdimg () {
 
 	BOOT_SPACE_ALIGNED=$(expr ${BOOT_SPACE} + ${IMAGE_ROOTFS_ALIGNMENT} - 1)
 	BOOT_SPACE_ALIGNED=$(expr ${BOOT_SPACE_ALIGNED} - ${BOOT_SPACE_ALIGNED} % ${IMAGE_ROOTFS_ALIGNMENT})
